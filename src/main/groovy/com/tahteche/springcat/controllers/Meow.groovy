@@ -1,0 +1,14 @@
+package com.tahteche.springcat.controllers
+
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+@RequestMapping("meow")
+class Meow {
+    @GetMapping
+    String meow() {
+        return "meow"
+    }
+}
