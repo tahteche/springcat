@@ -2,7 +2,7 @@ name: Custom Actions Demo
 on: [push]
 
 jobs:
-  Dreamteam Job:
+  Dreamteam-Job:
     runs-on: ubuntu-latest
     name: Dream Team
     steps:
