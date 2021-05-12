@@ -1,0 +1,17 @@
+name: Custom Actions Demo
+on: [push]
+
+jobs:
+  Dreamteam Job:
+    runs-on: ubuntu-latest
+    name: Dream Team
+    steps:
+      - name: Dreamteam
+        id: dreamteam  # ID is optional
+        uses: tahteche/dreamteam@main
+        with:
+          number: 6
+      # Use the output from the `hello` step
+      - name: Contact the captain
+        # Value in single quotes to escape the colon inside the message
+        run: 'echo "You can reach the captain at: ${{ steps.dreamteam.outputs.captains-email }}"'
